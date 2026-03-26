@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Map App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>🌤 Weather Map</h1>
+
+  <div class="search-box">
+    <input type="text" id="cityInput" placeholder="Enter city name..." autocomplete="off">
+    <button id="searchBtn" onclick="getWeather()">Search</button>
+  </div>
+
+  <div id="error" class="error" role="alert" aria-live="polite"></div>
+
+  <div id="weatherResult" class="weather hidden"></div>
+
+  <div id="map" class="map"></div>
+</div>
+
+<!-- Google Maps API -->
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC7jJfgpwDI4SU8CmxD3OUsgIJ_OXpnl8&callback=initMap">
+</script>
+<script src="script.js"></script>
+</body>
+</html>
